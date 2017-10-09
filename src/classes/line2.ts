@@ -27,7 +27,7 @@ export class Line2 {
         var bSlope = b1y / b1x;
 
 
-        if (aSlope != bSlope)return false;
+        if (aSlope != bSlope) return false;
 
         var aDist = Vector2.distance0(this.point2);
         var bDist = Vector2.distance0(point);
@@ -39,7 +39,7 @@ export class Line2 {
     }
 
 
-    collideLine(line: Line2,edges:boolean): boolean {
+    collideLine(line: Line2, edges: boolean): boolean {
 
         let
             a1x = this.point1.x,
@@ -59,7 +59,7 @@ export class Line2 {
         //console.log(denominator,numerator1,numerator2);
 
         //todo is it correct
-        if(!edges && !numerator1)return false;
+        if (!edges && !numerator1) return false;
 
         // Detect coincident lines (has a problem, read below)
         if (denominator === 0) {
